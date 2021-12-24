@@ -1,0 +1,1 @@
+24 Dec 11:50:24 Func get_history Error: closed
