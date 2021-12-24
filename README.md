@@ -45,6 +45,7 @@ main.lua contains example code for FTX API.</br>
 Function **api.get_markets()** get symbol info. Fill global MARKETS. Return count of items.</br>
 Description on https://docs.ftx.com/#get-markets
 ```lua
+local api = require("api")
 MARKETS = {}
 local count = api.get_markets()
 print(json.encode(MARKETS))
@@ -55,6 +56,7 @@ Function **api.get_history()** Get e.g.('BTC-PERP', '1h', 1621256100, 1621269900
 Return [{unixtime(UTC in sec), open, high, low, close, volume}]</br>
 Description on https://docs.ftx.com/#get-historical-prices
 ```lua
+local api = require("api")
 local end_time = os.time() -- Current Time
 local start_time = end_time - 86400 -- 1d
 local history = api.get_history("BTC-PERP", "1h", start_time, end_time)
@@ -65,6 +67,7 @@ Function **api.get_wallet()** return wallet balances.</br>
 Description on https://docs.ftx.com/#wallet</br>
 Requires authentication.
 ```lua
+local api = require("api")
 local wallet = api.get_wallet()
 print(json.encode(wallet))
 ```
@@ -73,6 +76,7 @@ Function **api.set_order(...)** set buy/sell order.</br>
 Description on https://docs.ftx.com/#place-order</br>
 Requires authentication.
 ```lua
+local api = require("api")
 local order = api.set_order("BTC-PERP", "buy", "limit", 30555.21, 0.001)
 print(json.encode(order))
 ```
@@ -82,6 +86,7 @@ Get e.g. 'BTC-PERP' as optional parameter and return all open orders or open ord
 Description on https://docs.ftx.com/#get-open-orders</br>
 Requires authentication.
 ```lua
+local api = require("api")
 local open = api.open_order("BTC-PERP")
 print(json.encode(open))
 ```
@@ -91,6 +96,7 @@ Function set_order return order ID</br>
 Description on https://docs.ftx.com/#cancel-order</br>
 Requires authentication.
 ```lua
+local api = require("api")
 local cancel = api.open_order("Place-number-of-ID-here")
 print(json.encode(cancel))
 ```
