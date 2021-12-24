@@ -71,5 +71,17 @@ function util.sleep(sec)
     socket.sleep(sec)
 end
 
+--Get data value and return simple mooving average
+--Period = number of data elements 
+function util.sma(datatable)
+	local sum = 0.0
+
+	for _,v in pairs(datatable) do	
+		sum = (sum + v or 0)
+	end
+
+	return tonumber(string.format("%.2f", sum/#datatable))
+
+end
 
 return util
