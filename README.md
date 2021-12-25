@@ -1,6 +1,6 @@
 # Lua example code for FTX API
 
-Don't forget get API KEY from https://ftx.com and add values to api.lua module (api.api_key and api.api_secret)</br>
+Don't forget to get API KEY from https://ftx.com and add values to api.lua module (api.api_key and api.api_secret)</br>
 
 Module sha2.lua - is original source code by Egor Skriptunoff</br>
 Source Code : https://github.com/Egor-Skriptunoff/pure_lua_SHA</br>
