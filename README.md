@@ -37,7 +37,7 @@ echo 'eval $(luarocks path --bin)' >> ~/.zshrc
 ```
 
 
-## Descritpion
+## Description
 
 api.lua contains functions for cryptocurrency exchange [FTX](https://ftx.com)</br>
 main.lua contains example code for FTX API.</br>
